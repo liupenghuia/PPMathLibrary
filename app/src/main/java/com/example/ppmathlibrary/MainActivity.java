@@ -3,7 +3,7 @@ package com.example.ppmathlibrary;
 import android.os.Bundle;
 
 import com.example.pplibrary.IOperation;
-import com.example.pplibrary.PPOperationsImpl;
+import com.example.pplibrary.Operation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
 
-        IOperation operation = new PPOperationsImpl();
+        IOperation operation = Operation.getInstance();
         int sum = operation.sum(new int[]{1, 2, 3, 4, 5});
         System.out.println("1+2++++="+ sum);
 

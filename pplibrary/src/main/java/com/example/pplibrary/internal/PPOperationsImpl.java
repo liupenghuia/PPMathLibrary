@@ -1,4 +1,6 @@
-package com.example.pplibrary;
+package com.example.pplibrary.internal;
+
+import com.example.pplibrary.IOperation;
 
 public class PPOperationsImpl implements IOperation {
     @Override
@@ -15,7 +17,7 @@ public class PPOperationsImpl implements IOperation {
         return (double) sum(array) / array.length;
     }
 
-    
+
     @Override
     public int max(int[] array) {
         int max = array[0];
