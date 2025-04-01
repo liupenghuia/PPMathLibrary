@@ -2,6 +2,8 @@ package com.example.ppmathlibrary;
 
 import android.os.Bundle;
 
+import com.example.pplibrary.IOperation;
+import com.example.pplibrary.PPOperationsImpl;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,8 +13,6 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.ppmathlibrary.databinding.ActivityMainBinding;
-
-import com.example.pplibrary.PPMathOperations;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-        System.out.println("1+2="+PPMathOperations.add(1, 2));
+
+        IOperation operation = new PPOperationsImpl();
+        int sum = operation.sum(new int[]{1, 2, 3, 4, 5});
+        System.out.println("1+2++++="+ sum);
 
     }
 
