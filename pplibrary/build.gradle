@@ -2,12 +2,14 @@ plugins {
     id 'com.android.library'
 }
 
+apply from: "./maven-publish.gradle"
+
 android {
     namespace 'com.example.pplibrary'
     compileSdk 34
 
     defaultConfig {
-        minSdk 34
+        minSdk 30
         targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
