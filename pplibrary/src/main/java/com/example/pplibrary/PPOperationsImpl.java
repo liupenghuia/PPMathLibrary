@@ -15,6 +15,7 @@ public class PPOperationsImpl implements IOperation {
         return (double) sum(array) / array.length;
     }
 
+    
     @Override
     public int max(int[] array) {
         int max = array[0];
